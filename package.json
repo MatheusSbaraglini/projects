@@ -1,0 +1,29 @@
+{
+  "name": "curso-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "docker-compose -f docker-compose.test.yml up --build --abort-on-container-exit",
+    "start": "docker-compose -f docker-compose.develop.yml up",
+    "build": "docker-compose -f docker-compose.develop.yml build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.4.13",
+    "path": "^0.12.7",
+    "swagger-ui-express": "^4.0.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "mocha": "^6.0.0"
+  }
+}

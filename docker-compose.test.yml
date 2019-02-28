@@ -1,0 +1,20 @@
+# docker-compose -f docker-compose.test.yml up --build
+version: "3"
+
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile.test
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URL=mongodb://database:27017
+    depends_on:
+      - database
+  
+  database:
+    image: mongo:4.1.6
+    container_name: "database"
+    ports:
+      - 27017:27017
